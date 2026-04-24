@@ -1,42 +1,38 @@
-# MRL Starter
+# Contacts Kiosk
 
-## Purpose
+## What This Repository Is
 
-This repository is a starter template for the Model Refinement Lab.
+This repository is the working home for the Contacts Kiosk project: an application and supporting artifacts for a kiosk-style contact lookup experience.
 
-Use it to begin a new repository that follows the MRL loop:
+The repository keeps the product work, the semantic model, the slice definitions, and the implementation evidence in one place so the project can evolve in small, explicit steps.
+
+## Role Of MRL
+
+MRL is the method used here, not the product itself.
+
+It provides the artifact-driven loop for shaping this repository:
 
 ```text
 extract -> refine -> build -> egd -> release -> expose -> living -> extract
 ```
 
-This starter separates:
+In this repository, MRL is used to:
 
-- MRL core: the artifact-driven refinement loop and workflow
-- implementation packs: selectable language and architecture defaults
+- capture project meaning explicitly in semantic docs
+- turn that meaning into bounded slice definitions
+- implement and test one slice at a time
+- record expectation gaps and release decisions as repository artifacts
 
-The repository currently includes `python_ddd_monolith` as the example selected pack. If you want another shape such as Go, TypeScript, event sourcing, or a multi-runtime client/server system, keep the MRL core and replace the pack guidance intentionally.
+That means the MRL docs and skills define how work is organized, while the repository content defines what the Contacts Kiosk project is trying to build.
 
-One of the repository's main characteristics is that pre-defined packs can be used to scaffold new MRL projects. That lets adopters keep the same refinement workflow while starting from a language and architecture shape that already fits their context.
+This repository uses a split-license arrangement:
 
-MRL itself is AI-agent-friendly rather than tool-specific, but this starter is currently optimized for Codex-style repository workflows. It can still be used well with other AI coding agents when they operate from explicit repository artifacts instead of conversational memory.
+- MRL core and process artifacts remain under MIT
+- all other source code, documentation, and project artifacts are under MPL-2.0
 
-This repository uses a split-license arrangement: the MRL core remains under MIT, while all other source code, documentation, and project artifacts are under MPL-2.0.
+## Working With The Repository
 
----
-
-## Getting Started
-
-Clone the starter into the new repository name you want:
-
-```bash
-git clone <starter-url> my-new-project
-cd my-new-project
-```
-
-The preferred way to start a new project is to use this repository as a GitHub template, not as a fork. Forking is more appropriate when working on the starter itself or maintaining a derivative starter.
-
-Then read these files first:
+Read these files first:
 
 - `docs/operating/mrl_reference.md`
 - `docs/operating/skills_workflow.md`
@@ -46,45 +42,10 @@ Then read these files first:
 - `groundrules.md`
 - `docs/building/project_structure.md`
 
-Before writing substantial project-specific code, decide whether the adopting repository will keep the starter's default license or intentionally replace it with another license or a split-license model. Record that choice clearly in the root `LICENSE` and `decisions.md`.
-
-Then start the loop:
-
-1. run `extract` to build the first semantic baseline in `docs/semantics/`
-2. run `refine` to define the first slice in `docs/slices/`
-3. run `build` to implement one vertical slice
-4. run `egd` to review the built behavior
-
-The semantic placeholders in `docs/semantics/` are intentionally empty. They are meant to be filled by the `extract` phase, not by copying domain content from this starter.
-Preserve original evidence in `work/sources/` before extraction or refinement artifacts are produced elsewhere.
-
-For repositories that expect to use `expose`, released artifacts should normally be packaged in a portable runtime form, with a container image as the default. That packaging rule belongs to MRL operating guidance rather than to any specific adopting repository's domain semantics.
-
----
-
-## Starter Layout
-
-```text
-.agents/skills/            # repo-local MRL skills
-/docs/operating/           # MRL model and workflow docs
-/docs/packs/               # implementation pack definitions
-/docs/building/            # structure and bootstrap guidance
-/docs/evaluation/          # expectation-gap evaluation guidance
-/docs/semantics/           # domain-specific meaning created by extract
-/docs/slices/              # one slice document per increment
-/work/sources/             # canonical folder for curated raw evidence and original source material
-/work/changes/             # request, impact, and implementation artifacts
-/src/                      # implementation root shaped by the selected pack
-/tests/                    # executable specification
-```
-
----
+Then use the MRL loop to refine the Contacts Kiosk model in small, documented increments.
 
 ## Notes
 
-- Treat this repository as a template, not as a finished application.
-- Keep domain specifics out of the starter and in the adopting repository.
-- Keep the MRL loop generic and move language or architecture assumptions into packs.
-- Make licensing an explicit adoption choice; the starter can be reused under one license or adapted into a split-license repository when process material and implementation code need different terms.
-- Treat `work/` as repository memory, not scratch space; preserve original evidence in `work/sources/` before downstream artifacts are created.
+- Keep the project purpose in the semantic and slice artifacts, not in conversational memory.
+- Treat `work/` as repository memory, not scratch space.
 - Prefer one small slice over broad scaffolding.
