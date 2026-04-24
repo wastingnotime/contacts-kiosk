@@ -29,3 +29,5 @@ Use tests as specification. Start with domain tests, add integration tests for m
 
 ## Commit & Pull Request Guidelines
 Use Conventional Commits for commit subjects, choosing an appropriate type such as `feat`, `fix`, `docs`, `refactor`, `test`, `build`, `ci`, or `chore`. Keep commits scoped to one slice or doc change, and include test evidence in pull requests.
+
+Treat every completed change as a commit boundary. Once a deliberate change set is finished, commit it before starting the next change so finished work does not remain unrecorded in the working tree.

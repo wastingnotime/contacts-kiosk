@@ -106,3 +106,24 @@ Keep `.codex` as a first-class part of the repository workflow immediately. This
 
 ### Notes
 If future evidence shows that MRL depends on stable capabilities from a specific AI tool, record a follow-up decision describing the required coupling, why generic artifacts were insufficient, and which tool-specific assets should become part of the repository.
+
+## DEC-0004 - Commit After Every Completed Change
+
+- Date: 2026-04-24
+- Status: accepted
+- Owners: both
+
+### Context
+The repository workflow benefits from treating completed work as durable state instead of leaving finished changes parked in the working tree. Without an explicit rule, it is easy for a later task or context switch to blur the boundary between completed work and the next change.
+
+### Decision
+After every completed change set, create a git commit before starting the next change. The commit should reflect one logical unit of work, use a conventional commit subject when practical, and leave the repository in a clean state for the next iteration.
+
+### Consequences
+Completed work becomes easier to recover, review, and reason about. The repository history will be more granular, and the working tree should stay closer to the true current state of the loop.
+
+### Alternatives considered
+Leaving commit timing to individual preference. That was rejected because it makes completion boundaries ambiguous and increases the chance that finished work remains unrecorded.
+
+### Notes
+This decision is operational, not domain-specific. It should be reflected in the repo instructions and followed whenever a change is finished.

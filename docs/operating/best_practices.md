@@ -66,6 +66,8 @@ Use this test:
 - if it is a chosen shape, decide it in `refine`
 - if it is only needed to make the current slice executable, implement it in `build`
 
+Commit any completed change set before starting the next one. Treat the commit as part of finishing the work, not as an optional follow-up.
+
 ---
 
 ## Example

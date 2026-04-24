@@ -336,6 +336,18 @@ Each phase should:
 - write explicit artifacts
 - avoid depending on conversational memory
 
+## Commit Discipline
+
+Treat every completed change as a commit boundary.
+
+When a slice, doc change, or other deliberate unit of work is finished, create a git commit before starting the next change. Do not leave completed work uncommitted across a context switch or a new task.
+
+Preferred commit shape:
+
+- conventional commit subject
+- one logical change per commit
+- commit message that reflects the completed slice or doc change
+
 ---
 
 ## Skill Design Rules
