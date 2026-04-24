@@ -143,6 +143,8 @@ If you adopt a split-license approach:
 
 The important rule is clarity. An adopting repository should make it easy for a contributor, user, or downstream maintainer to tell which repository content is governed by which license and why.
 
+For this repository specifically, the MRL core and process artifacts remain under MIT, while all other source code, documentation, and project artifacts use MPL-2.0.
+
 ---
 
 ## Portability Test

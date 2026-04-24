@@ -21,6 +21,8 @@ One of the repository's main characteristics is that pre-defined packs can be us
 
 MRL itself is AI-agent-friendly rather than tool-specific, but this starter is currently optimized for Codex-style repository workflows. It can still be used well with other AI coding agents when they operate from explicit repository artifacts instead of conversational memory.
 
+This repository uses a split-license arrangement: the MRL core remains under MIT, while all other source code, documentation, and project artifacts are under MPL-2.0.
+
 ---
 
 ## Getting Started

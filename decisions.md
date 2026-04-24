@@ -127,3 +127,29 @@ Leaving commit timing to individual preference. That was rejected because it mak
 
 ### Notes
 This decision is operational, not domain-specific. It should be reflected in the repo instructions and followed whenever a change is finished.
+
+## DEC-0005 - Split Repository Licensing Between MRL Core And Project Content
+
+- Date: 2026-04-24
+- Status: accepted
+- Owners: both
+
+### Context
+The repository needs to keep the MRL operating and process material distinct from the rest of the source tree while making the non-MRL code, documentation, and artifacts clearly available under MPL-2.0.
+
+### Decision
+The repository now uses a split-license arrangement:
+
+- MRL core and process artifacts remain under MIT
+- all other source code, documentation, and project artifacts are licensed under MPL-2.0
+
+The root `LICENSE` acts as a split-license notice, and the full texts live under `LICENSES/`.
+
+### Consequences
+The repository has a clearer boundary between process material and project content. Downstream users can identify the governing terms more easily, and package metadata can point at MPL-2.0 for the project content without implying that the whole repository is under one license.
+
+### Alternatives considered
+Keep the entire repository under MIT. That was rejected because the user explicitly wants the non-MRL content to follow MPL-2.0.
+
+### Notes
+If future files need a different scope, add file-level notices or update the split-license notice so the repository stays unambiguous.
